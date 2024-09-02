@@ -62,13 +62,14 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *dmenucmd[] = { "dmenu", NULL };
-static const char *termcmd[]  = { "xfce4-terminal", NULL };
+static const char *termcmd[]  = { "wezterm", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ ShiftMask,             	XK_Return, spawn,          {.v = dmenucmd } },
+	// { ShiftMask,             	XK_Return, spawn,          {.v = dmenucmd } },
+
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
