@@ -15,10 +15,10 @@ static const char col_cyan[]        = "#005577";
 static const char col_black[]       = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_black,  col_gray2  },
-	// [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	// [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	//[SchemeNorm] = { col_gray3, col_black, col_gray2 },
+	//[SchemeSel]  = { col_gray4, col_black,  col_gray2  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
 /* tagging */
@@ -62,7 +62,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *roficmd[] = { "rofi", "-show", "run", NULL };
 static const char *dmenucmd[] = { "dmenu", NULL };
-static const char *termcmd[]  = { "wezterm", NULL };
+static const char *termcmd[]  = { "xfce4-terminal", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
